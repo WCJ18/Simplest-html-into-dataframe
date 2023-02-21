@@ -1,0 +1,27 @@
+#imports pandas, which allows use of functionslike df(( and len()
+import pandas as pd
+
+#creates variable df(standard dataframe variable name)
+df = pd.read_csv('D:\Python and power bi\ADventure works data\AdventureWorks_Sales_2015.csv')
+
+#display general details about file called in variable df
+
+df.info() #display row and column detail
+print('rowcount: ' + str(len(df))) #rowcount
+print('column count: ' + str(len(df.columns))) #column count
+print('Get the number of rows and columns: ' + str(df.shape)) #Get the number of rows and columns
+print('Get the number of elements:  ' + str(df.size)) #rowcount
+
+#setting variables that filter for the column and then the value
+#terriroy_key = df[(df['TerritoryKey'] == 1)]
+pdk1 = df[(df['ProductKey'] == 332)]
+pdk2 = df[(df['ProductKey'] == 312)]
+pdk3 = df[(df['ProductKey'] == 310)]
+
+# create csv of pdk1 rows meeting criteria of df[]
+pdk1.to_csv('pdk1.csv')
+
+#print the calculated (len) variables (that are filtered from declarartion above
+print("producet 332 count: " + str(len(pdk1)))
+print("producet 332 count: " + str(len(pdk2)))
+print("producet 332 count: " + str(len(pdk3)))
