@@ -1,16 +1,24 @@
-#imports pandas, which allows use of functionslike df(( and len()
 import pandas as pd
 
-#creates variable df(standard dataframe variable name)
-df = pd.read_csv('D:\Python and power bi\ADventure works data\AdventureWorks_Sales_2015.csv')
+#creates variable and reads file in using pandas 
+df = pd.read_csv('YOUR LOCAL FILE PATH/FILE.CSV')
 
 #display general details about file called in variable df
 
-df.info() #display row and column detail
-print('rowcount: ' + str(len(df))) #rowcount
-print('column count: ' + str(len(df.columns))) #column count
-print('Get the number of rows and columns: ' + str(df.shape)) #Get the number of rows and columns
-print('Get the number of elements:  ' + str(df.size)) #rowcount
+#display row and column detail
+df.info()
+
+#rowcount
+print('rowcount: ' + str(len(df)))
+
+#column count
+print('column count: ' + str(len(df.columns)))
+
+#Get the number of rows and columns
+print('Get the number of rows and columns: ' + str(df.shape))
+
+#rowcount
+print('Get the number of elements:  ' + str(df.size)) 
 
 #setting variables that filter for the column and then the value
 #terriroy_key = df[(df['TerritoryKey'] == 1)]
